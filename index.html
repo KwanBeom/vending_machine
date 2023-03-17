@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <title>밴딩머신</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+
+                <img src="images/logo.svg" alt="콜라콜라 로고">
+
+        </header>
+
+        <main class="flex-wrap">
+            <h1 class="a11y-hidden">콜라 자판기</h1>
+            <section class="left-content">
+                <h2 class="a11y-hidden">음료 구매</h2>
+                <div class="grid-container">
+
+                    <a href="#" class="drink-box">
+                        <p class="soldout-text bold">품절</p>
+                        <img src="images/redcola.svg" alt="기본 콜라">
+                        <h2 class="drink-text">Original_Cola</h2>
+                        <p class="price-text">1000원</p>
+                    </a>
+                    <a href="#" class="drink-box soldout">
+                        <p class="soldout-text bold">품절</p>
+                        <img src="images/violetcola.svg" alt="기본 콜라">
+                        <h2 class="drink-text">Violet_Cola</h2>
+                        <p class="price-text">1000원</p>
+                    </a>
+                    <a href="#" class="drink-box">
+                        <p class="soldout-text bold">품절</p>
+                        <img src="images/yellowcola.svg" alt="기본 콜라">
+                        <h2 class="drink-text">Yellow_Cola</h2>
+                        <p class="price-text">1000원</p>
+                    </a>
+                    <a href="#" class="drink-box">
+                        <p class="soldout-text bold">품절</p>
+                        <img src="images/coolcola.svg" alt="기본 콜라">
+                        <h2 class="drink-text">Cool_Cola</h2>
+                        <p class="price-text">1000원</p>
+                    </a>
+                    <a href="#" class="drink-box">
+                        <p class="soldout-text bold">품절</p>
+                        <img src="images/greencola.svg" alt="기본 콜라">
+                        <h2 class="drink-text">Green_Cola</h2>
+                        <p class="price-text">1000원</p>
+                    </a>
+                    <a href="#" class="drink-box">
+                        <p class="soldout-text bold">품절</p>
+                        <img src="images/orangecola.svg" alt="기본 콜라">
+                        <h2 class="drink-text">Orange_Cola</h2>
+                        <p class="price-text">1000원</p>
+                    </a>
+
+                    <form id="left-money" class="mt8">
+                        <div class="money-box">
+                            <p>잔액 :<span class="text-right">1,000원</span></p>
+                        </div>
+                    </form>
+                    <button type="submit" class="shadow-btn mt8" form="left-money">거스름돈 반환</button>
+                    <form id="deposit">
+                        <input type="text" class="write-money" pattern="[0-9]+" placeholder="입금액 입력" required>
+                    </form>
+                    <button type="submit" class="shadow-btn" form="deposit">입금</button>
+                    <form id="get-drink">
+                        <div class="scroll-box">
+                            <div class="scroll-item">
+                                <p><span>Original_Cola</span></p>
+                                <div class="count">1</div>
+                            </div>
+                            <div class="scroll-item">
+                                <p><span>Green_Cola</span></p>
+                                <div class="count">2</div>
+                            </div>
+                        </div>   
+                    </form>
+                    <button type="submit" class="get-btn" form="get-drink">획득</button>
+
+                </div>  
+
+            </section>
+
+            <section class="right-content">
+            <h2 class="a11y-hidden">소지금액</h2>
+
+                <div class="money-box">
+                    <p>소지금 :<span class="text-right">25,000원</span></p>
+                </div>
+
+                <span class="bgcolor-margin"></span>
+
+                <h2 class="mydrink-text bold">획득한 음료</h2>
+                <div class="scroll-box">
+                    <div class="scroll-item">
+                        <p><span>Original_Cola</span></p>
+                        <div class="count">1</div>
+                    </div>
+                    <div class="scroll-item">
+                        <p><span>Green_Cola</span></p>
+                        <div class="count">2</div>
+                    </div>
+                    <div class="scroll-item">
+                        <p><span>Orange_Cola</span></p>
+                        <div class="count">1</div>
+                    </div>
+                    <div class="scroll-item">
+                        <p><span>Violet_Cola</span></p>
+                        <div class="count">5</div>
+                    </div>
+                </div>
+                <p class="total-money text-right">총 금액 : 9,000원</p>
+            </section>
+
+        </main>
+        
+    </div>
+</body>
+
+
+</html>
+<script>
+    (function(d) {
+    var config = {
+        kitId: 'uux2evh',
+        scriptTimeout: 3000,
+        async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script>
+</html>

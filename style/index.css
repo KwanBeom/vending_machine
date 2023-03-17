@@ -1,0 +1,140 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.mt8{
+    margin-top: 8px;
+}
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+/* 전체 화면 wrap */
+.wrapper{
+    background-color: #EAE8FE;
+    height: 100vh;
+}
+
+/* header */
+.header{
+    text-align: center;
+}
+.header img{
+    aspect-ratio: 386/180;
+    margin: 0 auto;
+}
+
+/* layout */
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+/* scroll box item */
+.scroll-item p::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 33px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.scroll-item:nth-child(1) p::before{
+    background: url('../images/redcola.svg') no-repeat center / contain;
+}
+.scroll-item:nth-child(2) p::before{
+    background: url('../images/greencola.svg') no-repeat center / contain;
+}
+.scroll-item:nth-child(3) p::before{
+    background: url('../images/orangecola.svg') no-repeat center / contain;
+}
+.scroll-item:nth-child(4) p::before{
+    background: url('../images/violetcola.svg') no-repeat center / contain;
+}
+
+/* 컨텐츠 영역 */
+.left-content,
+.right-content{
+    background-color: #fff;
+    box-sizing: border-box;
+}
+/* 좌측 컨텐츠 영역 */
+.left-content{
+    flex: 0 0 360px;
+    padding: 31px 27px;
+}
+.left-content .price-text{
+    display: block;
+}
+.left-content .grid-container{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 12px;
+}
+.left-content form{
+    grid-column: 1 / 3;
+}
+/* 우측 컨텐츠 영역 */
+.right-content{
+    flex: 0 0 360px;
+    padding: 10px 27px;
+}
+.right-content .bgcolor-margin{
+    display: block;
+    margin: 12px -27px;
+    height: 20px;
+    background-color: var(--main-color);
+}
+.right-content .scroll-box{
+    height: 364px;
+}
+.right-content .mydrink-text{
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 0 12px;
+}
+.right-content .total-money{
+    margin-top: 6px;
+}
+
+
+
+
+@media (max-width: 747px){
+    .wrapper{
+        background: inherit;
+    }
+    .header img{
+        width: 166px;
+    }
+    .left-content{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .right-content{
+        padding-top: 0;
+    }
+    .right-content .bgcolor-margin{
+        display: none;
+    }
+    .right-content .mydrink-text{
+        margin-top: 40px;
+    }
+}
+
+
+
+/* 765px에서 flex가 wrap 풀림 */
+/* 747px에서 flex가 wrap 걸림 */

@@ -5,6 +5,11 @@ body{
     padding: 0;
     margin: 0;
 }
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 .mt8{
     margin-top: 8px;
 }
@@ -41,6 +46,11 @@ body{
     justify-content: center;
     gap: 28px;
 }
+.drink-wrap{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 12px;
+}
 
 /* scroll box item */
 .scroll-item p::before{
@@ -51,18 +61,7 @@ body{
     margin-right: 10px;
     vertical-align: middle;
 }
-.scroll-item:nth-child(1) p::before{
-    background: url('../images/redcola.svg') no-repeat center / contain;
-}
-.scroll-item:nth-child(2) p::before{
-    background: url('../images/greencola.svg') no-repeat center / contain;
-}
-.scroll-item:nth-child(3) p::before{
-    background: url('../images/orangecola.svg') no-repeat center / contain;
-}
-.scroll-item:nth-child(4) p::before{
-    background: url('../images/violetcola.svg') no-repeat center / contain;
-}
+
 
 /* 컨텐츠 영역 */
 .left-content,

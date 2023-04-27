@@ -153,7 +153,6 @@ button{
 
 
 /* 스크롤바 스타일 */
-```
 .scroll-box::-webkit-scrollbar {
     width: 12px;
 }
@@ -168,7 +167,6 @@ button{
 .scroll-box::-webkit-scrollbar-track {
     background-color: rgba(0,0,0,0);
 }
-```
 
 /* 스크롤 div item */
 .scroll-item{
@@ -188,6 +186,7 @@ button{
     border-radius: var(--radius-5px);
     width: 30px;
     height: 30px;
+    align-self: center;
     text-align: center;
     line-height: 30px;
     border: var(--border-1px)
